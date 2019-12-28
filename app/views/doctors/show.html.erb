@@ -1,0 +1,12 @@
+<h2><%= @doctor.name %></h2>
+<h2><%= @doctor.department %></h2>
+
+<h3>Doctor's Appointments:</h3>
+
+<% @doctor.appointments.each do |app| %>
+    <%= link_to "#{app.appointment_datetime.strftime("%B %d, %Y at %k:%M")}, #{app.patient.name}", patient_path(app.patient) %>
+    <br>
+<% end  %>
+
+
+<%= button_to "Back to Doctors", doctors_path, method: :get %>
