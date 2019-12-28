@@ -1,0 +1,15 @@
+<h2>Add a New Patient</h2>
+
+<%= form_for @patient do |f| %>
+
+    <%= f.label :name, "Patient's Name" %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :age, "Patient's Age"%>
+    <%= f.text_field :age %>
+    <br>
+    <%= f.submit %>
+
+<%end %>
+
+<%= button_to "Cancel", patients_path, method: :get %>

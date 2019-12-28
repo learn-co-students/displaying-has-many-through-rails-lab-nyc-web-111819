@@ -1,0 +1,15 @@
+<h2>Add New Doctor</h2>
+
+<%= form_for @doctor do |f| %>
+
+    <%= f.label :name, "Doctor's Name" %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :department, "Doctor's Department" %>
+    <%= f.text_field :department %>
+    <br>
+    <%= f.submit %>
+
+<%end  %>
+
+<%= button_to "Cancel", doctors_path, method: :get %>
